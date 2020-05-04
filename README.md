@@ -1,7 +1,7 @@
 # Ultralytics-YOLOv3-Cluster-NMS
 ## Cluster-NMS into YOLOv3 Pytorch
 
-This is the code for our paper:
+##### This is the code for our paper:
  - [Enhancing Geometric Factors into Model Learning and Inference for Object Detection and Instance Segmentation](https://arxiv.org/abs/1904.02689)
 
 ```
@@ -14,7 +14,7 @@ This is the code for our paper:
 ```
 # Introduction
 
-###This repo only focuses on NMS improvement based on https://https://github.com/ultralytics/yolov3.
+### This repo only focuses on NMS improvement based on https://https://github.com/ultralytics/yolov3.
 
 ### See `non_max_suppression` function of [utils/utils.py](utils/utils.py) for our Cluster-NMS implementation.
 
