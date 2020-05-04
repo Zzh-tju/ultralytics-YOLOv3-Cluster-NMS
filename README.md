@@ -14,7 +14,7 @@ This is the code for our paper:
 ```
 # Introduction
 
-This repo only focuses on NMS improvement based on ([https://https://github.com/ultralytics/yolov3] https://https://github.com/ultralytics/yolov3)
+This repo only focuses on NMS improvement based on https://https://github.com/ultralytics/yolov3.
 
 This directory contains PyTorch YOLOv3 software developed by Ultralytics LLC, and **is freely available for redistribution under the GPL-3.0 license**. For more information please visit https://www.ultralytics.com.
 
