@@ -55,7 +55,7 @@ This repo only focuses on NMS improvement.
 | 608  | YOLOv3-SPP-ultralytics |               Weighted-NMS             | 11.2 | 42.9 | 46.4 | 62.7 |
 | 608  | YOLOv3-SPP-ultralytics |          Weighted Cluster-NMS          | 68.0 | 42.9 | 46.4 | 62.7 |
 | 608  | YOLOv3-SPP-ultralytics |       Weighted + Cluster-DIoU-NMS      | 64.9 | 43.1 | 46.8 | 63.7 |
-| 608  | YOLOv3-SPP-ultralytics |         Merge + Torchvision NMS        | 88.5 | 42.8 | 46.3 | 63.0 |
+| 608  | YOLOv3-SPP-ultralytics |         Merge + Torchvision NMS        | # 88.5 | 42.8 | 46.3 | 63.0 |
 | 608  | YOLOv3-SPP-ultralytics |      Merge + DIoU + Torchvision NMS    | 82.5 | 43.0 | 46.6 | 63.2 |
 ## Discussion
 
