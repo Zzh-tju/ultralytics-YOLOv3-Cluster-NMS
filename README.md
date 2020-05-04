@@ -65,7 +65,7 @@ AP reports on `coco 2014 minival`.
 | 608  | YOLOv3-SPP-ultralytics |       Weighted + Cluster-DIoU-NMS      | 64.9     | **43.1** | **46.8** | **63.7** |
 | 608  | YOLOv3-SPP-ultralytics |         Merge + Torchvision NMS        | 88.5     | 42.8     | 46.3     | 63.0     |
 | 608  | YOLOv3-SPP-ultralytics |      Merge + DIoU + Torchvision NMS    | 82.5     | 43.0     | 46.6     | 63.2     |
-## Discussion
+## Conclusion
 
  - Merge NMS is a simplified version of Weighted-NMS. It just use score vector for weighted coordinates, not combine score and IoU.
  
