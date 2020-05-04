@@ -58,7 +58,7 @@ This repo only focuses on NMS improvement.
 | 608  | YOLOv3-SPP-ultralytics |       Weighted + Torchvision NMS       | 88.5 | 42.8 | 46.3 | 63.0 |
 ## Discussion
 
-Note that Torchvision NMS has the fastest speed, that is owing to CUDA imprementation and engineering accelerations (like upper triangular IoU matrix only). However, our Cluster-NMS requires less iterations for NMS and can also be further accelerated by adopting engineering tricks. Almost completed at the same time as the work of our paper is Glenn Jocher's Torchvision NMS + merge. First, we do Torchvision NMS, then convert the output to vector to multiply the IoU matrix. Also, for merge/Weighted NMS, the IoU matrix is no need to be square shape $n\times n$. It can be $m\times n$ to save more time, where $m$ is the boxes that NMS outputs.
+Note that Torchvision NMS has the fastest speed, that is owing to CUDA imprementation and engineering accelerations (like upper triangular IoU matrix only). However, our Cluster-NMS requires less iterations for NMS and can also be further accelerated by adopting engineering tricks. Almost completed at the same time as the work of our paper is Glenn Jocher's Torchvision NMS + merge. First, we do Torchvision NMS, then convert the output to vector to multiply the IoU matrix. Also, for merge/Weighted NMS, the IoU matrix is no need to be square shape \[n\times n\]. It can be \[m\times n\] to save more time, where \[m\] is the boxes that NMS outputs.
 
 # Citation
 
