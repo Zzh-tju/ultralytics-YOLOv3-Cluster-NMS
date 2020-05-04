@@ -44,7 +44,8 @@ This repo only focuses on NMS improvement.
 #### Hardware
  - 2 GTX 1080 Ti
  - Intel(R) Core(TM) i7-6850K CPU @ 3.60GHz
- 
+Evaluation command: `python3 test.py --cfg yolov3-spp.cfg --weights yolov3-spp-ultralytics.pt`
+AP reports on `coco 2014 minival`.
  | Image Size | Model  | NMS  | FPS  | box AP | box AP75 | box AR100 |
 |:----:|:-------------:|:------------------------------------:|:----:|:----:|:----:|:----:|
 | 608  | YOLOv3-SPP-ultralytics |                 Fast NMS               | 85.5     | 42.2     | 45.1     | 60.1     |
