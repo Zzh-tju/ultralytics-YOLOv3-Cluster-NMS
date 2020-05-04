@@ -1,7 +1,7 @@
 # Ultralytics-YOLOv3-Cluster-NMS
-Cluster-NMS into YOLOv3 Pytorch
+## Cluster-NMS into YOLOv3 Pytorch
 
-This is the code for our papers:
+This is the code for our paper:
  - [Enhancing Geometric Factors into Model Learning and Inference for Object Detection and Instance Segmentation](https://arxiv.org/abs/1904.02689)
 
 ```
@@ -13,6 +13,8 @@ This is the code for our papers:
 }
 ```
 # Introduction
+
+This repo only focuses on NMS improvement based on ([https://https://github.com/ultralytics/yolov3] https://https://github.com/ultralytics/yolov3)
 
 This directory contains PyTorch YOLOv3 software developed by Ultralytics LLC, and **is freely available for redistribution under the GPL-3.0 license**. For more information please visit https://www.ultralytics.com.
 
@@ -39,7 +41,6 @@ YOLOv3-tiny<br>YOLOv3<br>YOLOv3-SPP<br>**[YOLOv3-SPP-ultralytics](https://drive.
 - Darknet results: https://arxiv.org/abs/1804.02767
 
 ## Cluster-NMS
-This repo only focuses on NMS improvement.
 
 #### Hardware
  - 2 GTX 1080 Ti
@@ -53,6 +54,7 @@ AP reports on `coco 2014 minival`.
 |:----:|:-------------:|:------------------------------------:|:----:|:----:|:----:|:----:|
 | 608  | YOLOv3-SPP-ultralytics |                 Fast NMS               | 85.5     | 42.2     | 45.1     | 60.1     |
 | 608  | YOLOv3-SPP-ultralytics |               Original NMS             | 14.6     | 42.6     | 45.8     | 62.5     | 
+| 608  | YOLOv3-SPP-ultralytics |                 DIoU-NMS               | 7.9      | 42.7     | 46.2     | 63.4     | 
 | 608  | YOLOv3-SPP-ultralytics |        Original NMS Torchvision        | **95.2** | 42.6     | 45.8     | 62.5     | 
 | 608  | YOLOv3-SPP-ultralytics |               Cluster-NMS              | 82.6     | 42.6     | 45.8     | 62.5     | 
 | 608  | YOLOv3-SPP-ultralytics |             Cluster-DIoU-NMS           | 76.9     | 42.7     | 46.2     | 63.4     | 
@@ -71,7 +73,7 @@ AP reports on `coco 2014 minival`.
  
  - Currently, Torchvision NMS use IoU as criterion, not DIoU. However, if we directly replace IoU with DIoU in Original NMS, it will costs much more time due to the sequence operation. Now, Cluster-DIoU-NMS will significantly speed up DIoU-NMS and obtain exactly the same result.
  
- - Torchvision NMS is a function in Torchvision>=0.4, and our cluster-NMS can be applied to any projects that use low version of Torchvision and other deep learning frameworks as long as it can do matrix operations. No other import, no need to compile, less iteration, fully GPU-accelerated and better performance.
+ - Torchvision NMS is a function in Torchvision>=0.4, and our Cluster-NMS can be applied to any projects that use low version of Torchvision and other deep learning frameworks as long as it can do matrix operations. No other import, no need to compile, less iteration, fully GPU-accelerated and better performance.
 # Citation
 
 [![DOI](https://zenodo.org/badge/146165888.svg)](https://zenodo.org/badge/latestdoi/146165888)
