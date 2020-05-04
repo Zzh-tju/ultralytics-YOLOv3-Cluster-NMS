@@ -46,7 +46,7 @@ This repo only focuses on NMS improvement.
  - Intel(R) Core(TM) i7-6850K CPU @ 3.60GHz
  
  | Image Size | Model  | NMS  | FPS  | box AP | box AP75 | box AR100 |
-|:----:|:-------------:|:-------:|:------------------------------------:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|:----:|:-------------:|:------------------------------------:|:----:|:----:|:----:|:----:|
 | 608  | YOLOv3-SPP-ultralytics |                 Fast NMS               | 85.5 | 42.2 | 45.1 | 60.1 |
 | 608  | YOLOv3-SPP-ultralytics |               Original NMS             | 14.6 | 42.6 | 45.8 | 62.5 | 
 | 608  | YOLOv3-SPP-ultralytics |               Cluster-NMS              | 82.6 | 42.6 | 45.8 | 62.5 | 
