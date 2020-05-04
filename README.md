@@ -47,16 +47,16 @@ This repo only focuses on NMS improvement.
  
  | Image Size | Model  | NMS  | FPS  | box AP | box AP75 | box AR100 |
 |:----:|:-------------:|:------------------------------------:|:----:|:----:|:----:|:----:|
-| 608  | YOLOv3-SPP-ultralytics |                 Fast NMS               | 85.5 | 42.2 | 45.1 | 60.1 |
-| 608  | YOLOv3-SPP-ultralytics |               Original NMS             | 14.6 | 42.6 | 45.8 | 62.5 | 
-| 608  | YOLOv3-SPP-ultralytics |        Original NMS Torchvision        | 95.2 | 42.6 | 45.8 | 62.5 | 
-| 608  | YOLOv3-SPP-ultralytics |               Cluster-NMS              | 82.6 | 42.6 | 45.8 | 62.5 | 
-| 608  | YOLOv3-SPP-ultralytics |             Cluster-DIoU-NMS           | 76.9 | 42.7 | 46.2 | 63.4 | 
-| 608  | YOLOv3-SPP-ultralytics |               Weighted-NMS             | 11.2 | 42.9 | 46.4 | 62.7 |
-| 608  | YOLOv3-SPP-ultralytics |          Weighted Cluster-NMS          | 68.0 | 42.9 | 46.4 | 62.7 |
-| 608  | YOLOv3-SPP-ultralytics |       Weighted + Cluster-DIoU-NMS      | 64.9 | 43.1 | 46.8 | 63.7 |
-| 608  | YOLOv3-SPP-ultralytics |         Merge + Torchvision NMS        | # 88.5 | 42.8 | 46.3 | 63.0 |
-| 608  | YOLOv3-SPP-ultralytics |      Merge + DIoU + Torchvision NMS    | 82.5 | 43.0 | 46.6 | 63.2 |
+| 608  | YOLOv3-SPP-ultralytics |                 Fast NMS               | 85.5     | 42.2     | 45.1     | 60.1     |
+| 608  | YOLOv3-SPP-ultralytics |               Original NMS             | 14.6     | 42.6     | 45.8     | 62.5     | 
+| 608  | YOLOv3-SPP-ultralytics |        Original NMS Torchvision        | **95.2** | 42.6     | 45.8     | 62.5     | 
+| 608  | YOLOv3-SPP-ultralytics |               Cluster-NMS              | 82.6     | 42.6     | 45.8     | 62.5     | 
+| 608  | YOLOv3-SPP-ultralytics |             Cluster-DIoU-NMS           | 76.9     | 42.7     | 46.2     | 63.4     | 
+| 608  | YOLOv3-SPP-ultralytics |               Weighted-NMS             | 11.2     | 42.9     | 46.4     | 62.7     |
+| 608  | YOLOv3-SPP-ultralytics |          Weighted Cluster-NMS          | 68.0     | 42.9     | 46.4     | 62.7     |
+| 608  | YOLOv3-SPP-ultralytics |       Weighted + Cluster-DIoU-NMS      | 64.9     | **43.1** | **46.8** | **63.7** |
+| 608  | YOLOv3-SPP-ultralytics |         Merge + Torchvision NMS        | 88.5     | 42.8     | 46.3     | 63.0     |
+| 608  | YOLOv3-SPP-ultralytics |      Merge + DIoU + Torchvision NMS    | 82.5     | 43.0     | 46.6     | 63.2     |
 ## Discussion
 
  - Merge NMS is a simplified version of Weighted-NMS. It just use score vector for weighted coordinates, not combine score and IoU.
