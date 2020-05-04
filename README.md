@@ -69,7 +69,7 @@ AP reports on `coco 2014 minival`.
  
  - Note that Torchvision NMS has the fastest speed, that is owing to CUDA imprementation and engineering accelerations (like upper triangular IoU matrix only). However, our Cluster-NMS requires less iterations for NMS and can also be further accelerated by adopting engineering tricks. Almost completed at the same time as the work of our paper is Glenn Jocher's Torchvision NMS + Merge. First, we do Torchvision NMS, then convert the output to vector to multiply the IoU matrix. Also, for Merge NMS, the IoU matrix is no need to be square shape `n*n`. It can be `m*n` to save more time, where `m` is the boxes that NMS outputs.
  
- - Torchvision NMS is a function in Torchvision>=0.4, and our cluster-NMS can be applied to low version of Torchvision and other deep learning frameworks as long as it can do matrix operations. No other import, less iteration, fully GPU-accelerated and better performance.
+ - Torchvision NMS is a function in Torchvision>=0.4, and our cluster-NMS can be applied to any projects that use low version of Torchvision and other deep learning frameworks as long as it can do matrix operations. No other import, no need to compile, less iteration, fully GPU-accelerated and better performance.
 # Citation
 
 [![DOI](https://zenodo.org/badge/146165888.svg)](https://zenodo.org/badge/latestdoi/146165888)
