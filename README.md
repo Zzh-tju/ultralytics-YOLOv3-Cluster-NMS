@@ -55,11 +55,17 @@ This repo only focuses on NMS improvement.
 | 608  | YOLOv3-SPP-ultralytics |               Weighted-NMS             | 11.2 | 42.9 | 46.4 | 62.7 |
 | 608  | YOLOv3-SPP-ultralytics |          Weighted Cluster-NMS          | 68.0 | 42.9 | 46.4 | 62.7 |
 | 608  | YOLOv3-SPP-ultralytics |       Weighted + Cluster-DIoU-NMS      | 64.9 | 43.1 | 46.8 | 63.7 |
-| 608  | YOLOv3-SPP-ultralytics |       Weighted + Torchvision NMS       | 88.5 | 42.8 | 46.3 | 63.0 |
+| 608  | YOLOv3-SPP-ultralytics |         Merge + Torchvision NMS        | 88.5 | 42.8 | 46.3 | 63.0 |
+| 608  | YOLOv3-SPP-ultralytics |      Merge + DIoU + Torchvision NMS    | 82.5 | 43.0 | 46.6 | 63.2 |
 ## Discussion
 
-Note that Torchvision NMS has the fastest speed, that is owing to CUDA imprementation and engineering accelerations (like upper triangular IoU matrix only). However, our Cluster-NMS requires less iterations for NMS and can also be further accelerated by adopting engineering tricks. Almost completed at the same time as the work of our paper is Glenn Jocher's Torchvision NMS + merge. First, we do Torchvision NMS, then convert the output to vector to multiply the IoU matrix. Also, for merge/Weighted NMS, the IoU matrix is no need to be square shape `n*n`. It can be `m*n` to save more time, where `m` is the boxes that NMS outputs.
-
+ - Merge NMS is a simplified version of Weighted-NMS. It just use score vector for weighted coordinates, not combine score and IoU.
+ 
+ - We further incorporate DIoU into NMS for YOLOv3 which can get higher AP and AR.
+ 
+ - Note that Torchvision NMS has the fastest speed, that is owing to CUDA imprementation and engineering accelerations (like upper triangular IoU matrix only). However, our Cluster-NMS requires less iterations for NMS and can also be further accelerated by adopting engineering tricks. Almost completed at the same time as the work of our paper is Glenn Jocher's Torchvision NMS + merge. First, we do Torchvision NMS, then convert the output to vector to multiply the IoU matrix. Also, for merge/Weighted NMS, the IoU matrix is no need to be square shape `n*n`. It can be `m*n` to save more time, where `m` is the boxes that NMS outputs.
+ 
+ - Torchvision NMS is a function dedicated to Torchvision>=0.3, and our cluster-NMS can be applied to low version of Torchvision and other deep learning frameworks as long as it can do matrix operations. No other import, less iteration, fully GPU-accelerated and better performance.
 # Citation
 
 [![DOI](https://zenodo.org/badge/146165888.svg)](https://zenodo.org/badge/latestdoi/146165888)
