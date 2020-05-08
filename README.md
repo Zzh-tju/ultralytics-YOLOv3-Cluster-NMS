@@ -16,9 +16,9 @@
 }
 
 @Article{zheng2020ciou,
-  author    = {Zhaohui Zheng, Ping Wang, Dongwei Ren, Wei Liu, Rongguang Ye, Qinghua Hu, Wangmeng Zuo},
+  author= {Zhaohui Zheng, Ping Wang, Dongwei Ren, Wei Liu, Rongguang Ye, Qinghua Hu, Wangmeng Zuo},
   title={Enhancing Geometric Factors in Model Learning and Inference for Object Detection and Instance Segmentation},
-  journal="arXiv",
+  journal={arXiv:2005.03572},
   year={2020}
 }
 ```
