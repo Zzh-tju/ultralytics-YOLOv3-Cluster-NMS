@@ -89,11 +89,6 @@ AP reports on `coco 2014 minival`.
  
  - Torchvision NMS is a function in Torchvision>=0.3, and our Cluster-NMS can be applied to any projects that use low version of Torchvision and other deep learning frameworks as long as it can do matrix operations. **No other import, no need to compile, less iteration, fully GPU-accelerated and better performance**.
  
- |           | Batch Size | torchvision merge nms | batch mode Cluster-Weighted NMS  |
-|:----:|:-------------:|:-----------:|:-----------:|
-| AP  | -  | 42.9  | 42.9 |
-| time  | 4  | 3.0ms  | 4.4ms |
-| time  | 32  | 2.3ms  | 3.0ms |
 # Citation
 
 [![DOI](https://zenodo.org/badge/146165888.svg)](https://zenodo.org/badge/latestdoi/146165888)
