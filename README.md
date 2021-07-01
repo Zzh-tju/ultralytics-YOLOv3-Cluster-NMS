@@ -2,6 +2,7 @@
 
 # Ultralytics-YOLOv3-Cluster-NMS
 ## Cluster-NMS into YOLOv3 Pytorch
+Our paper is accepted by **IEEE Transactions on Cybernetics (TCYB)**.
 
 #### This is the code for our paper:
  - [Distance-IoU Loss: Faster and Better Learning for Bounding Box Regression](https://arxiv.org/abs/1911.08287)
@@ -15,11 +16,11 @@
    year      = {2020},
 }
 
-@Article{zheng2020ciou,
+@Article{ciou-tcyb2021,
   author= {Zhaohui Zheng, Ping Wang, Dongwei Ren, Wei Liu, Rongguang Ye, Qinghua Hu, Wangmeng Zuo},
   title={Enhancing Geometric Factors in Model Learning and Inference for Object Detection and Instance Segmentation},
-  journal={arXiv:2005.03572},
-  year={2020}
+  journal={IEEE Transactions on Cybernetics},
+  year={2021}
 }
 ```
 # Introduction
